@@ -1,14 +1,16 @@
 import React from "react";
 import * as Pages from "pages";
 import { Route, Switch } from "react-router-dom";
+import Header from "components/common/Header";
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
+      <Header />
       <Switch>
         <Route path="/" component={Pages.Artworks} />
       </Switch>
-    </div>
+    </React.Fragment>
   );
 }
 

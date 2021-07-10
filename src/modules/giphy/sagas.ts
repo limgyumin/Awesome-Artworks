@@ -1,6 +1,6 @@
 import { call, put, takeEvery } from "redux-saga/effects";
 import { fetchGiphyImages } from "api/giphy";
-import { GiphyResponse } from "api/giphy/types";
+import { GiphyResponse } from "types/giphy.type";
 import { fetchGiphyImagesAsync, FETCH_GIPHY_IMAGES } from "./actions";
 
 function* fetchGiphyImagesSaga(

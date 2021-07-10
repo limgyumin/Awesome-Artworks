@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as config from "config/config.json";
-import { FetchGiphyImagesPayload, GiphyResponse } from "./types";
+import { FetchGiphyImagesPayload, GiphyResponse } from "types/giphy.type";
 
 export const fetchGiphyImages = async ({
   page,

@@ -1,4 +1,4 @@
-import { GiphyImage } from "api/giphy/types";
+import { GiphyImage } from "types/giphy.type";
 import { AxiosError } from "axios";
 import { createAction, createAsyncAction } from "typesafe-actions";
 

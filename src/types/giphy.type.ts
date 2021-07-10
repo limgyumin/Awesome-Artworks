@@ -6,7 +6,7 @@ interface GiphyUser {
 export interface GiphyImage {
   id: string;
   title: string;
-  user: GiphyUser;
+  user?: GiphyUser;
   images: {
     original: {
       url: string;

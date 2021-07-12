@@ -1,1 +1,1 @@
-export const FETCH_ARTWORKS_LIMIT = 30;
+export const FETCH_ARTWORKS_LIMIT = 50;

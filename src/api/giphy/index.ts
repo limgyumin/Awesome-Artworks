@@ -8,7 +8,7 @@ export const fetchGiphyImages = async ({
 }: FetchGiphyImagesPayload): Promise<GiphyResponse> => {
   const { API_KEY, BASE_URL } = config.API;
 
-  const offset = page * limit;
+  const offset = (page - 1) * limit;
 
   const url = `${BASE_URL}/gifs/trending`;
 

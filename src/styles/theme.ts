@@ -5,6 +5,7 @@ const colors = {
 
   ftBlack: "#000",
   ftGray: "#31343A",
+  ftllGray: "#EFEFEF",
   ftBlue: "#005DFF",
   ftSkyBlue: "#F6F7F9",
 };

@@ -1,4 +1,4 @@
-interface GiphyUser {
+export interface GiphyUser {
   avatar_url: string;
   username: string;
 }

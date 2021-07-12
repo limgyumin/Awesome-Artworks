@@ -1,3 +1,4 @@
+import { distinct, merge } from "lib/images";
 import { createReducer } from "typesafe-actions";
 import {
   FETCH_GIPHY_IMAGES,
@@ -28,7 +29,8 @@ const giphy = createReducer<GiphyState, GiphyAction>(initialState, {
         data: {
           ...state.data,
           page: 1,
-          images: [],
+          total: 0,
+          artworks: [],
         },
       };
     } else {
@@ -51,6 +53,7 @@ const giphy = createReducer<GiphyState, GiphyAction>(initialState, {
         data: {
           ...state.data,
           ...action.payload,
+          artworks: distinct(action.payload.artworks),
         },
       };
     } else {
@@ -61,7 +64,7 @@ const giphy = createReducer<GiphyState, GiphyAction>(initialState, {
         data: {
           ...state.data,
           ...action.payload,
-          images: [...state.data.artworks, ...action.payload.artworks],
+          artworks: merge(state.data.artworks, action.payload.artworks),
         },
       };
     }
